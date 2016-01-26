@@ -12,17 +12,38 @@ tr{
 td, th{
     border:1px solid black;
 }
-ul{
+ul.topnav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: white;
 }
-li{
-    display: inline;
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color:#ffd9cc;}
+
+ul.topnav li a.active {background-color: antiquewhite;}
+
+ul.topnav ul.right {
     float: right;
-    margin-left: 5px;
+    list-style-type: none;
 }
+
+@media screen and (max-width: 600px){
+    ul.topnav ul.right,
+    ul.topnav li {float: none;}
+}
+
 body{
     text-align: center;
 }
@@ -36,4 +57,13 @@ h2{
 }
 tr{
     text-align: center;
+}
+button{
+    background-color: white;
+    border: 2px solid red;
+    color: red;
+}
+button:hover{
+    color: white;
+    background-color: red;
 }

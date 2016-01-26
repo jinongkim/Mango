@@ -1,0 +1,31 @@
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li{
+    display: inline;
+    float: right;
+    margin-left: 5px;
+}
+body{
+    text-align: center;
+}
+h1{
+    margin-top: 145px;
+}
+h2{
+    margin-right: 700px;
+    margin-top: 50px;
+}
+h3{
+    margin-top: 50px;
+}
+button{
+    width: 150px;
+    height: 70px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 150px;
+}

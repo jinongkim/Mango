@@ -1,0 +1,42 @@
+body{
+    text-align: center;
+}
+h1{
+    margin: 145px;
+    letter-spacing: 10px;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+li{
+    display: inline;
+    float: right;
+    margin-left: 5px;
+}
+#email{
+    margin-right: 10px;
+    letter-spacing: 7px;
+
+}
+.box{
+    margin-left: -30px;
+}
+h3{
+    margin-top: 80px;
+    color: brown;
+}
+#submit{
+    margin-left: 50px;
+    width: 80px;
+    height: 40px;
+}
+.text{
+    letter-spacing: 100px;
+  }
+.box2{
+    margin-left: 60px;
+}

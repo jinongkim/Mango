@@ -1,0 +1,47 @@
+body{
+    text-align: center;
+}
+h1{
+    margin: 145px;
+    letter-spacing: 10px;
+}
+.summit{
+    margin-left:500px;
+    height: 50px;
+    width: 90px;
+
+}
+.s_n{
+    letter-spacing: 20px;
+}
+.name{
+    letter-spacing: 19px;
+}
+.email{
+
+    margin-right:115px ;
+}
+.pw{
+    margin-right: 95px;
+    letter-spacing: 5px;
+}
+.pw_con{
+    margin-right: 127px;
+}
+.button{
+    margin-left: 30px;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li{
+    display: inline;
+    float: right;
+    margin-left: 5px;
+}
+.box{
+    margin-left: 30px;
+}

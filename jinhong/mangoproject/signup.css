@@ -8,11 +8,17 @@ h1{
 }
 .summit{
     margin-left:500px;
-    height: 50px;
+    height: 60px;
     width: 90px;
+    border: 8px solid bisque;
+    background-color: white;
+    color: brown;
+    border-radius: 15px;
+}
+.summit:hover{
+    background-color: bisque;
 
 }
-
 .s_n{
     letter-spacing: 20px;
 }
@@ -32,6 +38,14 @@ h1{
 }
 .button{
     margin-left: 30px;
+    background-color: white;
+    border: 2px solid brown;
+    color: brown;
+    border-radius: 6px;
+}
+.button:hover{
+    background-color: brown;
+    color: white;
 }
 
 .box{

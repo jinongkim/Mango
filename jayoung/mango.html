@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>세미나실 예약</title>
+
+    <script language="JavaScript">
+        function showCalendar(y, m) {
+            var text = '<table>\n<tr><td colspan=7 style="text-align:center">';
+            text += '<span onclick="showCalendar('+(y-1)+','+m+')"> Y- </span>';
+            text += '<span onclick="showCalendar('+(m==1?(y-1)+','+12:y+','+(m-1))+')"> M- </span>';
+            text += '[' + y + '/' + ((m < 10) ? ('0' + m) : m) + ']';
+            text += '<span onclick="showCalendar('+(m==12?(y+1)+','+1:y+','+(m+1))+')"> M+ </span>';
+            text += '<span onclick="showCalendar('+(y+1)+','+m+')"> Y+ </span>';
+            text += '</td>';
+
+            var d1 = (y+(y-y%4)/4-(y-y%100)/100+(y-y%400)/400
+                    +m*2+(m*5-m*5%9)/9-(m<3?y%4||y%100==0&&y%400?2:3:4))%7;
+            for (i = 0; i < 42; i++) {
+                if (i%7==0) text += '</tr>\n<tr>';
+                if (i < d1 || i >= d1+(m*9-m*9%8)/8%2+(m==2?y%4||y%100==0&&y%400?28:29:30))
+                    text += '<td> </td>';
+                else
+                    text += '<td' + (i%7 ? '' : ' style="color:red;"') + '>' + (i+1-d1) + '</td>';
+            }
+            document.getElementById('calendarDiv').innerHTML = text + '</tr>\n</table>';
+        }
+    </script>
+
+    <link type="text/css" rel="stylesheet" href="mango_css.css"/>
+</head>
+<body onload="showCalendar(2016,1)">
+<h1 >예약 하기</h1>
+<p>*이용시 공지사항*</p>
+<p>-4인이상 이용이 가능합니다.</p>
+<p>-최대 3시간 이용이 가능합니다.</p>
+<p>-세미나실 이요마감 시간은 23:00입니다.</p>
+<button>다음</button>
+
+<table>
+    <tr>
+        <td rowspan="16"><div id="calendarDiv" style="font-family:Gulim;font-size:58px;"></div>
+        </td>
+        <td id="td2" colspan="2">날짜별 이용 현황</td>
+    </tr>
+
+    <tr>
+        <td>9:00 ~ 9:30</td>
+        <td>9:30 ~ 10:00</td>
+    </tr>
+    <tr>
+        <td>10:00 ~ 11:30</td>
+        <td>11:30 ~ 12:00</td>
+    </tr>
+    <tr>
+        <td>12:00 ~ 12:30</td>
+        <td>12:30 ~ 13:00</td>
+    </tr>
+    <tr>
+        <td>13:00 ~ 13:30</td>
+        <td>13:30 ~ 14:00</td>
+    </tr>
+    <tr>
+        <td>14:00 ~ 14:30</td>
+        <td>14:30 ~ 15:00</td>
+    </tr>
+    <tr>
+        <td>15:00 ~ 15:30</td>
+        <td>15:30 ~ 16:00</td>
+    </tr>
+    <tr>
+        <td>16:00 ~ 16:30</td>
+        <td>16:30 ~ 17:00</td>
+    </tr>
+    <tr>
+        <td>17:00 ~ 17:30</td>
+        <td>17:30 ~ 18:00</td>
+    </tr>
+    <tr>
+        <td>18:00 ~ 18:30</td>
+        <td>18:30 ~ 19:00</td>
+    </tr>
+    <tr>
+        <td>19:00 ~ 19:30</td>
+        <td>19:30 ~ 20:00</td>
+    </tr>
+    <tr>
+        <td>20:00 ~ 20:30</td>
+        <td>20:30 ~ 21:00</td>
+    </tr>
+    <tr>
+        <td>21:00 ~ 21:30</td>
+        <td>21:30 ~ 22:00</td>
+    </tr>
+    <tr>
+        <td>22:00 ~ 22:30</td>
+        <td>22:30 ~ 23:00</td>
+    </tr>
+    <tr>
+        <td>ㅁ 예약 가능</td>
+        <td style ="color: red">ㅁ 예약 완료</td>
+    </tr>
+
+</table>
+
+
+</body>
+</html>
